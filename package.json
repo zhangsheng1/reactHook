@@ -44,7 +44,10 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "mockjs": "^1.1.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "react-router-dom": "^5.1.2",
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "theme": "./src/theme.js"
