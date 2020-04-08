@@ -13,6 +13,7 @@
         "@babel/preset-react"
     ],
     "plugins": [
+        ["@babel/plugin-proposal-class-properties", { "loose": true }],
         [
             "import",
             {
@@ -20,6 +21,6 @@
                 "style": true
             }
         ],
-        //"@babel/transform-runtime", "@babel/plugin-transform-regenerator"
+        "@babel/transform-runtime", "@babel/plugin-transform-regenerator"
     ]
 }
