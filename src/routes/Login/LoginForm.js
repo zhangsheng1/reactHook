@@ -3,14 +3,14 @@
  * Version: v1.0.
  * Autor: 张胜
  * Date: 2020-04-07 16:33:00
- * LastEditTime: 2020-04-08 18:02:13
+ * LastEditTime: 2020-04-09 11:14:47
  * Description: 
  */
 
 import React, {useState, useMemo, useEffect} from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-
+//import './style.less'
 const LoginForm=()=>{
   const canvasRef = React.createRef()
   const [form]=Form.useForm()
@@ -52,9 +52,9 @@ const LoginForm=()=>{
              <h3 style={{textAlign:'center'}}>管理员注册</h3>
              <Form
               name="normal_login"
-              style={{maxWidth: 300}}
               //initialValues={{ remember: true }}
               onFinish={onFinish}
+              style={styles.loginForm} 
             >
               <Form.Item
                 name="username"
@@ -77,13 +77,13 @@ const LoginForm=()=>{
                   <Checkbox>Remember me</Checkbox>
                 </Form.Item>
 
-                <a style={{float: 'right'}} href="">
+                <a style={{float: 'right'}} href="" style={styles.loginFormForgot}>
                   Forgot password
                 </a>
               </Form.Item>
 
-              <Form.Item>
-                <Button type="primary" htmlType="submit" style={{width: '100%'}}>
+              <Form.Item >
+                <Button type="primary" htmlType="submit" style={styles.loginFormButton} >
                   Log in
                 </Button>
                 Or <a href="">register now!</a>
@@ -91,6 +91,23 @@ const LoginForm=()=>{
             </Form>
            </div>
 }
+
+const styles = {
+  loginForm:{
+    maxWidth:'300px',
+    marginLeft: '43%'
+  },
+  loginFormForgot:{
+    float:'right',
+  },
+  // loginFormForgot:{
+  //   float:'left',
+  // },
+  loginFormButton:{
+    width:'100%'
+  }
+  }
+
   
 
 
